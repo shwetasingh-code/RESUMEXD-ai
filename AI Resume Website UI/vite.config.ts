@@ -1,6 +1,5 @@
-import { defineConfig, type HtmlTagDescriptor, type Plugin } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
 
 // Vite config — https://vitejs.dev/config/
@@ -10,12 +9,11 @@ export default defineConfig(({ mode }) => {
   return {
     base: './',
     build: {
-      sourcemap: emitSourcemaps ? 'inline' : false,
-      minify: !emitSourcemaps,
+      sourcemap: false,
+      minify: true,
     },
     plugins: [
       react(),
-      tailwindcss(),
       figmaErrorOverlayReplay(),
       figmaReactRefreshBoundaryFallback(),
       figmaMakeKitPlugin({ storiesGlob: '/src/**/*.stories.{ts,tsx,js,jsx}' }),
