@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   HomeIcon, DocumentIcon, SearchIcon, BriefcaseIcon,
   ChartBarIcon, ShieldCheckIcon, SparklesIcon, BellIcon, UserIcon,
@@ -26,6 +26,11 @@ const NAV_ITEMS: { id: Page; label: string; icon: React.FC<{ size?: number; colo
 export default function App() {
   const [page, setPage] = useState<Page>("get-started");
   const [notifOpen, setNotifOpen] = useState(false);
+
+  // Tab Title Fix
+  useEffect(() => {
+    document.title = "ResumeXD - AI Resume Builder";
+  }, []);
 
   const navigate = (p: string) => setPage(p as Page);
 
