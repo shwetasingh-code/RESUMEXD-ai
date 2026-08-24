@@ -24,7 +24,3 @@ body {
   color: #0f172a;
   -webkit-font-smoothing: antialiased;
 }
-
-::-webkit-scrollbar {
-  width: 0px;
-}
