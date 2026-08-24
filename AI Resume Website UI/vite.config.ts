@@ -11,6 +11,9 @@ export default defineConfig(({ mode }) => {
     build: {
       sourcemap: false,
       minify: true,
+      rollupOptions: {
+        external: ['react-is'],
+      },
     },
     plugins: [
       react(),
@@ -20,7 +23,7 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'),
+        '@': path.resolve(process.cwd(), './src'),
       },
     },
     server: {
