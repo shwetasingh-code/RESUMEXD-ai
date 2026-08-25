@@ -1,28 +1,31 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        brand: {
-          DEFAULT: 'var(--color-brand)',
-          light: 'var(--color-brand-light)',
-          mid: 'var(--color-brand-mid)',
-        },
-        navy: 'var(--color-navy)',
-        slate: 'var(--color-slate)',
-        muted: 'var(--color-muted)',
-        surface: 'var(--color-surface)',
-        border: 'var(--color-border)',
-      },
-      fontFamily: {
-        sans: ['var(--font-sans)'],
-        display: ['var(--font-display)'],
-      },
-    },
-  },
-  plugins: [],
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', sans-serif;
+    --font-display: 'DM Sans', sans-serif;
+    --color-brand: #2563eb;
+    --color-brand-light: #eff6ff;
+    --color-brand-mid: #bfdbfe;
+    --color-navy: #0f172a;
+    --color-slate: #475569;
+    --color-muted: #94a3b8;
+    --color-surface: #f8fafc;
+    --color-border: #e2e8f0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+  }
 }
