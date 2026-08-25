@@ -11,9 +11,6 @@ export default defineConfig(({ mode }) => {
     build: {
       sourcemap: false,
       minify: true,
-      rollupOptions: {
-        external: ['react-is'],
-      },
     },
     plugins: [
       react(),
