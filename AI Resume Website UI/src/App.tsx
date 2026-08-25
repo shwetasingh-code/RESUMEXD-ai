@@ -187,6 +187,4 @@ export default function App() {
   );
 }
 
-```
 
-GitHub par save hote hi Vercel builds activate kar dega aur tab ka name change ho jayega!
